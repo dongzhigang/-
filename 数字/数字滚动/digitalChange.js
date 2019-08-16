@@ -21,16 +21,14 @@ digitalChange.prototype._setInterval = function(el){
 	var val = el.getAttribute("data");		//获取元素值
     var addNUm = val.length>1?(val.length - 1)*this.default.multiple:1;        //根据数字长度给增加的数
     var num = 0;				//计算数值
-    var speed = Math.ceil(this.default.speed/(val.length)); 		//根据数字长度计算增加速度	
-    console.log(addNUm)	
- 	console.log(speed)				
+    var speed = Math.ceil(this.default.speed/(val.length)); 		//根据数字长度计算增加速度				
     var Interval = setInterval(function(){     
         num+=addNUm;
         if(num > Number(val) || Number(val) == 0){
             num = val;
             clearInterval(Interval)
         }
-        if(el.innerHTML) el.innerHTML = num;
-        if(el.value) el.value = num;
+        if(val) el.innerHTML = num;
+        if(val) el.value = num;
     }.bind(this),speed)
 }
