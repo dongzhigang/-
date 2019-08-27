@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片滚动在区域再加载-图片懒加载</title>
+</head>
+<style>
+    .imgBox{
+        width: 100%;
+        margin: 0 auto;
+    }
+    img{
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="imgBox">
+        <img src="./images/1.jpg" data-src="./images/1.jpg" />
+        <img src="./images/2.jpg" data-src="./images/2.jpg" />
+        <img src="" data-src="./images/3.jpg" />
+        <img src="" data-src="./images/4.jpg" />
+        <img src="" data-src="./images/5.jpg" />
+        <img src="" data-src="./images/6.jpg" />
+        <img src="" alt="不加载" />
+        <img src="" data-src="./images/7.jpg" alt="不加载" />
+        <img src="" data-src="./images/8.jpg"/>
+    </div>
+</body>
+<script src="lazyload.js" type="text/javascript" ></script>
+<script>
+  var img = new Img()
+</script>
+</html>

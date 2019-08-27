@@ -1,7 +1,7 @@
 var digitalChange = function(argument){
 	this.default = {
         el:'#count',                         //当前元素
-        speed:50,                            //数字变化速度，默认20
+        speed:20,                            //数字变化速度，默认20
         multiple:1,                          //增加倍数，默认5
     }
     this._init(argument)
